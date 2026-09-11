@@ -16,7 +16,7 @@ const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 const model = genAI.getGenerativeModel({
-  model: 'gemini-2.5-flash',   // ← مدل جدید و کار می‌کنه
+  model: 'gemini-3.8-flash',
   systemInstruction: SYSTEM_PROMPT,
 });
 
@@ -34,8 +34,4 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, reply);
   } catch (error) {
     console.error('خطا در پاسخ‌دهی:', error);
-    await bot.sendMessage(chatId, 'متأسفم، مشکلی پیش اومد. لطفاً دوباره امتحان کن.');
-  }
-});
-
-console.log('ربات روشن شد...');
+    await bot.sendMessage(chatId
