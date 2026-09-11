@@ -1,14 +1,14 @@
 {
   "name": "telegram-ai-bot",
   "version": "1.0.0",
-  "description": "Telegram AI auto-reply bot",
+  "description": "Telegram AI auto-reply bot using Gemini",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "node-telegram-bot-api": "^0.66.0",
-    "@anthropic-ai/sdk": "^0.32.1"
+    "@google/generative-ai": "^0.21.0"
   },
   "engines": {
     "node": ">=18"
